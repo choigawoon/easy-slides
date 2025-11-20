@@ -27,13 +27,75 @@
     "logout": "로그아웃",
     "login": "로그인",
     "mswTest": "MSW 테스트",
-    "zustandTest": "Zustand 테스트"
+    "zustandTest": "Zustand 테스트",
+    "newPresentation": "새 프레젠테이션",
+    "loginHint": "로그인하여 프레젠테이션을 저장하세요"
   },
   "pages": {
     "home": {
       "title": "환영합니다",
       "description": "TanStack Router로 구축된 현대적인 React 애플리케이션입니다",
-      "getStarted": "시작하기"
+      "getStarted": "시작하기",
+      "hero": {
+        "title": "아름다운 프레젠테이션을 손쉽게 만들어보세요",
+        "subtitle": "세미나와 강연을 위한 현대적인 웹 프레젠테이션 플랫폼. URL 하나로 만들고, 공유하고, 발표하세요.",
+        "cta": "프레젠테이션 만들기",
+        "demo": "데모 보기"
+      },
+      "features": {
+        "title": "왜 Easy Slides인가요?",
+        "easy": {
+          "title": "쉬운 사용",
+          "description": "복잡한 설정 없이 즉시 프레젠테이션을 만들 수 있습니다."
+        },
+        "share": {
+          "title": "간편한 공유",
+          "description": "URL 하나로 즉시 공유. 다운로드가 필요 없습니다."
+        },
+        "present": {
+          "title": "발표 모드",
+          "description": "타이머와 노트가 포함된 최적화된 발표자 뷰."
+        },
+        "discover": {
+          "title": "콘텐츠 발견",
+          "description": "유용한 프레젠테이션을 검색하고 발견하세요."
+        },
+        "privacy": {
+          "title": "개인정보 관리",
+          "description": "공개, 링크 공유, 비공개 옵션으로 가시성을 제어하세요."
+        },
+        "markdown": {
+          "title": "마크다운 지원",
+          "description": "실시간 미리보기와 함께 마크다운으로 슬라이드를 작성하세요."
+        }
+      },
+      "howItWorks": {
+        "title": "사용 방법",
+        "step1": {
+          "title": "새 프레젠테이션 만들기",
+          "description": "'새 프레젠테이션' 버튼을 클릭하여 슬라이드 작성을 시작하세요."
+        },
+        "step2": {
+          "title": "마크다운으로 작성",
+          "description": "실시간 미리보기와 함께 마크다운 에디터로 내용을 작성하세요."
+        },
+        "step3": {
+          "title": "작업 공유하기",
+          "description": "고유한 URL을 받아 누구와도 프레젠테이션을 공유하세요."
+        },
+        "step4": {
+          "title": "자신있게 발표하기",
+          "description": "타이머와 노트가 있는 전체화면 발표 모드를 사용하세요."
+        }
+      },
+      "cta": {
+        "title": "시작할 준비가 되셨나요?",
+        "description": "몇 분 안에 멋진 프레젠테이션을 만들어보세요.",
+        "button": "무료로 시작하기"
+      },
+      "footer": {
+        "copyright": "Easy Slides - 웹 프레젠테이션 플랫폼"
+      }
     },
     "mswTest": {
       "title": "MSW + TanStack Query 테스트",
