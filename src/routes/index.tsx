@@ -24,33 +24,52 @@ function LandingPage() {
   const features = [
     {
       icon: Zap,
-      titleKey: 'pages.home.features.easy.title',
-      descKey: 'pages.home.features.easy.description',
+      title: t('pages.home.features.easy.title'),
+      description: t('pages.home.features.easy.description'),
     },
     {
       icon: Share2,
-      titleKey: 'pages.home.features.share.title',
-      descKey: 'pages.home.features.share.description',
+      title: t('pages.home.features.share.title'),
+      description: t('pages.home.features.share.description'),
     },
     {
       icon: Monitor,
-      titleKey: 'pages.home.features.present.title',
-      descKey: 'pages.home.features.present.description',
+      title: t('pages.home.features.present.title'),
+      description: t('pages.home.features.present.description'),
     },
     {
       icon: Globe,
-      titleKey: 'pages.home.features.discover.title',
-      descKey: 'pages.home.features.discover.description',
+      title: t('pages.home.features.discover.title'),
+      description: t('pages.home.features.discover.description'),
     },
     {
       icon: Lock,
-      titleKey: 'pages.home.features.privacy.title',
-      descKey: 'pages.home.features.privacy.description',
+      title: t('pages.home.features.privacy.title'),
+      description: t('pages.home.features.privacy.description'),
     },
     {
       icon: Presentation,
-      titleKey: 'pages.home.features.markdown.title',
-      descKey: 'pages.home.features.markdown.description',
+      title: t('pages.home.features.markdown.title'),
+      description: t('pages.home.features.markdown.description'),
+    },
+  ]
+
+  const steps = [
+    {
+      title: t('pages.home.howItWorks.step1.title'),
+      description: t('pages.home.howItWorks.step1.description'),
+    },
+    {
+      title: t('pages.home.howItWorks.step2.title'),
+      description: t('pages.home.howItWorks.step2.description'),
+    },
+    {
+      title: t('pages.home.howItWorks.step3.title'),
+      description: t('pages.home.howItWorks.step3.description'),
+    },
+    {
+      title: t('pages.home.howItWorks.step4.title'),
+      description: t('pages.home.howItWorks.step4.description'),
     },
   ]
 
@@ -112,10 +131,10 @@ function LandingPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">
-                        {t(feature.titleKey)}
+                        {feature.title}
                       </h3>
                       <p className="text-gray-400 text-sm">
-                        {t(feature.descKey)}
+                        {feature.description}
                       </p>
                     </div>
                   </div>
@@ -134,17 +153,17 @@ function LandingPage() {
           </h2>
 
           <div className="space-y-8">
-            {[1, 2, 3, 4].map((step) => (
-              <div key={step} className="flex items-start gap-4">
+            {steps.map((step, index) => (
+              <div key={index} className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                  {step}
+                  {index + 1}
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-1">
-                    {t(`pages.home.howItWorks.step${step}.title`)}
+                    {step.title}
                   </h3>
                   <p className="text-gray-400">
-                    {t(`pages.home.howItWorks.step${step}.description`)}
+                    {step.description}
                   </p>
                 </div>
               </div>
