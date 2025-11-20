@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ZustandTestRouteImport } from './routes/zustand-test'
 import { Route as MswTestRouteImport } from './routes/msw-test'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EditorNewRouteImport } from './routes/editor.new'
+import { Route as EditorIdRouteImport } from './routes/editor.$id'
 
 const ZustandTestRoute = ZustandTestRouteImport.update({
   id: '/zustand-test',
@@ -28,35 +30,59 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EditorNewRoute = EditorNewRouteImport.update({
+  id: '/editor/new',
+  path: '/editor/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EditorIdRoute = EditorIdRouteImport.update({
+  id: '/editor/$id',
+  path: '/editor/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/msw-test': typeof MswTestRoute
   '/zustand-test': typeof ZustandTestRoute
+  '/editor/$id': typeof EditorIdRoute
+  '/editor/new': typeof EditorNewRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/msw-test': typeof MswTestRoute
   '/zustand-test': typeof ZustandTestRoute
+  '/editor/$id': typeof EditorIdRoute
+  '/editor/new': typeof EditorNewRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/msw-test': typeof MswTestRoute
   '/zustand-test': typeof ZustandTestRoute
+  '/editor/$id': typeof EditorIdRoute
+  '/editor/new': typeof EditorNewRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/msw-test' | '/zustand-test'
+  fullPaths: '/' | '/msw-test' | '/zustand-test' | '/editor/$id' | '/editor/new'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/msw-test' | '/zustand-test'
-  id: '__root__' | '/' | '/msw-test' | '/zustand-test'
+  to: '/' | '/msw-test' | '/zustand-test' | '/editor/$id' | '/editor/new'
+  id:
+    | '__root__'
+    | '/'
+    | '/msw-test'
+    | '/zustand-test'
+    | '/editor/$id'
+    | '/editor/new'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   MswTestRoute: typeof MswTestRoute
   ZustandTestRoute: typeof ZustandTestRoute
+  EditorIdRoute: typeof EditorIdRoute
+  EditorNewRoute: typeof EditorNewRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +108,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/editor/new': {
+      id: '/editor/new'
+      path: '/editor/new'
+      fullPath: '/editor/new'
+      preLoaderRoute: typeof EditorNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/editor/$id': {
+      id: '/editor/$id'
+      path: '/editor/$id'
+      fullPath: '/editor/$id'
+      preLoaderRoute: typeof EditorIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +129,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   MswTestRoute: MswTestRoute,
   ZustandTestRoute: ZustandTestRoute,
+  EditorIdRoute: EditorIdRoute,
+  EditorNewRoute: EditorNewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

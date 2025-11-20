@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Outlet, createRootRoute } from '@tanstack/react-router'
+import { Outlet, createRootRoute, useLocation } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { useTranslation } from 'react-i18next'
@@ -12,6 +12,10 @@ function RootComponent() {
   const theme = useTheme()
   const language = useLanguage()
   const { i18n } = useTranslation()
+  const location = useLocation()
+
+  // Check if we're on an editor page (hide header for full-screen editing)
+  const isFullscreenPage = location.pathname.startsWith('/editor') || location.pathname.startsWith('/present')
 
   // Apply theme to DOM when it changes
   useEffect(() => {
@@ -40,9 +44,9 @@ function RootComponent() {
 
   return (
     <>
-      <Header />
+      {!isFullscreenPage && <Header />}
       <Outlet />
-      <PWAPrompt />
+      {!isFullscreenPage && <PWAPrompt />}
       <TanStackDevtools
         config={{
           position: 'bottom-right',
