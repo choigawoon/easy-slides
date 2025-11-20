@@ -272,5 +272,24 @@
     "number": "{{value, number}}",
     "currency": "{{value, currency}}",
     "percent": "{{value, percent}}"
+  },
+  "editor": {
+    "newSlide": "새 슬라이드",
+    "newPresentation": "새 프레젠테이션",
+    "creating": "프레젠테이션 생성 중...",
+    "save": "저장",
+    "share": "공유",
+    "preview": "미리보기",
+    "present": "발표",
+    "back": "뒤로",
+    "delete": "삭제",
+    "duplicate": "복제",
+    "notes": "발표자 노트",
+    "notesPlaceholder": "발표 시 참고할 내용을 여기에 작성하세요...",
+    "placeholder": "마크다운으로 슬라이드 내용을 작성하세요...",
+    "titlePlaceholder": "프레젠테이션 제목",
+    "unsaved": "저장되지 않은 변경사항",
+    "unsavedConfirm": "저장되지 않은 변경사항이 있습니다. 정말 나가시겠습니까?",
+    "saving": "저장 중..."
   }
 }

@@ -272,5 +272,24 @@
     "number": "{{value, number}}",
     "currency": "{{value, currency}}",
     "percent": "{{value, percent}}"
+  },
+  "editor": {
+    "newSlide": "新しいスライド",
+    "newPresentation": "新しいプレゼンテーション",
+    "creating": "プレゼンテーションを作成中...",
+    "save": "保存",
+    "share": "共有",
+    "preview": "プレビュー",
+    "present": "発表",
+    "back": "戻る",
+    "delete": "削除",
+    "duplicate": "複製",
+    "notes": "発表者ノート",
+    "notesPlaceholder": "発表時の参考メモをここに入力してください...",
+    "placeholder": "マークダウンでスライドの内容を書いてください...",
+    "titlePlaceholder": "プレゼンテーションタイトル",
+    "unsaved": "未保存の変更",
+    "unsavedConfirm": "未保存の変更があります。本当に離れますか？",
+    "saving": "保存中..."
   }
 }

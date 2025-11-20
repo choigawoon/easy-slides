@@ -76,6 +76,101 @@ model User {
   isActive  Boolean  @default(true) @map("is_active")
 
   createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  presentations Presentation[]
 
   @@map("users")
+}
+
+// =============================================================================
+// Presentation Model
+// =============================================================================
+
+/// @zod.import(["import { z } from 'zod'"])
+model Presentation {
+  /// @zod.number.int().positive()
+  id          Int       @id @default(autoincrement())
+
+  /// @zod.string.min(1, { message: "Title is required" }).max(200)
+  title       String
+
+  /// @zod.string.max(1000).optional()
+  description String?
+
+  /// @zod.string.min(1, { message: "Slug is required" })
+  slug        String    @unique
+
+  thumbnail   String?
+
+  // Visibility settings
+  visibility  Visibility @default(PRIVATE)
+  password    String?
+
+  // Metadata
+  /// @zod.string.default("default")
+  theme       String    @default("default")
+
+  tags        String[]  @default([])
+  category    String?
+
+  // Statistics
+  viewCount   Int       @default(0) @map("view_count")
+
+  // Relations
+  userId      Int       @map("user_id")
+  user        User      @relation(fields: [userId], references: [id])
+  slides      Slide[]
+
+  // Timestamps
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([userId])
+  @@index([visibility])
+  @@index([slug])
+  @@map("presentations")
+}
+
+// =============================================================================
+// Slide Model
+// =============================================================================
+
+/// @zod.import(["import { z } from 'zod'"])
+model Slide {
+  /// @zod.number.int().positive()
+  id              Int       @id @default(autoincrement())
+
+  presentationId  Int       @map("presentation_id")
+  presentation    Presentation @relation(fields: [presentationId], references: [id], onDelete: Cascade)
+
+  /// @zod.number.int().nonnegative()
+  order           Int
+
+  /// @zod.string.min(0)
+  content         String
+
+  notes           String?
+
+  /// @zod.string.default("default")
+  layout          String    @default("default")
+
+  transition      String?
+
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  @@index([presentationId])
+  @@map("slides")
+}
+
+// =============================================================================
+// Enums
+// =============================================================================
+
+enum Visibility {
+  PRIVATE
+  UNLISTED
+  PUBLIC
 }

@@ -272,5 +272,24 @@
     "number": "{{value, number}}",
     "currency": "{{value, currency}}",
     "percent": "{{value, percent}}"
+  },
+  "editor": {
+    "newSlide": "New Slide",
+    "newPresentation": "New Presentation",
+    "creating": "Creating presentation...",
+    "save": "Save",
+    "share": "Share",
+    "preview": "Preview",
+    "present": "Present",
+    "back": "Back",
+    "delete": "Delete",
+    "duplicate": "Duplicate",
+    "notes": "Presenter Notes",
+    "notesPlaceholder": "Add notes for your presentation here...",
+    "placeholder": "Write your slide content in Markdown...",
+    "titlePlaceholder": "Presentation title",
+    "unsaved": "Unsaved changes",
+    "unsavedConfirm": "You have unsaved changes. Are you sure you want to leave?",
+    "saving": "Saving..."
   }
 }

@@ -18,3 +18,9 @@ export * from './search'
 
 // Health
 export * from './health'
+
+// Presentations
+export * from './presentations'
+
+// Slides
+export * from './slides'
