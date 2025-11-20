@@ -353,5 +353,123 @@
     "unsaved": "저장되지 않은 변경사항",
     "unsavedConfirm": "저장되지 않은 변경사항이 있습니다. 정말 나가시겠습니까?",
     "saving": "저장 중..."
+  },
+  "dashboard": {
+    "title": "내 프레젠테이션",
+    "subtitle": "프레젠테이션을 만들고 관리하세요",
+    "empty": {
+      "title": "프레젠테이션이 없습니다",
+      "description": "첫 번째 프레젠테이션을 만들어 시작하세요",
+      "cta": "프레젠테이션 만들기"
+    },
+    "createNew": "새 프레젠테이션",
+    "search": {
+      "placeholder": "프레젠테이션 검색..."
+    },
+    "sort": {
+      "label": "정렬",
+      "newest": "최신순",
+      "oldest": "오래된순",
+      "title": "제목 A-Z",
+      "titleDesc": "제목 Z-A",
+      "mostViewed": "조회수순"
+    },
+    "filter": {
+      "label": "필터",
+      "all": "전체",
+      "public": "공개",
+      "unlisted": "링크 공유",
+      "private": "비공개"
+    },
+    "card": {
+      "slides": "{{count}}개 슬라이드",
+      "views": "{{count}}회 조회",
+      "edit": "편집",
+      "present": "발표",
+      "share": "공유",
+      "duplicate": "복제",
+      "delete": "삭제",
+      "confirmDelete": "\"{{title}}\"을(를) 삭제하시겠습니까?",
+      "updated": "{{time}} 수정됨"
+    },
+    "stats": {
+      "total": "{{count}}개 프레젠테이션",
+      "showing": "{{total}}개 중 {{count}}개 표시"
+    }
+  },
+  "presenter": {
+    "slideNumber": "슬라이드 {{current}} / {{total}}",
+    "timer": "타이머",
+    "notes": "노트",
+    "exit": "종료",
+    "restart": "타이머 재시작",
+    "pause": "일시정지",
+    "resume": "재개",
+    "noNotes": "이 슬라이드에 노트가 없습니다",
+    "controls": {
+      "previous": "이전 슬라이드",
+      "next": "다음 슬라이드",
+      "fullscreen": "전체화면 전환"
+    }
+  },
+  "share": {
+    "title": "프레젠테이션 공유",
+    "visibility": {
+      "label": "공개 설정",
+      "private": "비공개",
+      "privateDesc": "본인만 접근 가능",
+      "unlisted": "링크 공유",
+      "unlistedDesc": "링크가 있는 사람만 볼 수 있음",
+      "public": "공개",
+      "publicDesc": "모든 사람이 검색 가능"
+    },
+    "link": {
+      "label": "공유 링크",
+      "copy": "링크 복사",
+      "copied": "링크가 복사되었습니다!"
+    },
+    "password": {
+      "enable": "비밀번호 보호",
+      "placeholder": "비밀번호 입력"
+    },
+    "embed": {
+      "label": "임베드 코드",
+      "copy": "코드 복사"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "로그인",
+      "subtitle": "다시 오신 것을 환영합니다!",
+      "email": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "password": "비밀번호",
+      "passwordPlaceholder": "비밀번호를 입력하세요",
+      "submit": "로그인",
+      "forgotPassword": "비밀번호를 잊으셨나요?",
+      "noAccount": "계정이 없으신가요?",
+      "signUp": "회원가입",
+      "error": "이메일 또는 비밀번호가 올바르지 않습니다",
+      "success": "환영합니다!"
+    },
+    "register": {
+      "title": "회원가입",
+      "subtitle": "지금 바로 프레젠테이션을 만들어보세요.",
+      "fullName": "이름",
+      "fullNamePlaceholder": "이름을 입력하세요",
+      "username": "사용자명",
+      "usernamePlaceholder": "사용자명을 선택하세요",
+      "email": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "password": "비밀번호",
+      "passwordPlaceholder": "비밀번호를 생성하세요",
+      "confirmPassword": "비밀번호 확인",
+      "confirmPasswordPlaceholder": "비밀번호를 다시 입력하세요",
+      "submit": "계정 만들기",
+      "hasAccount": "이미 계정이 있으신가요?",
+      "signIn": "로그인",
+      "passwordMismatch": "비밀번호가 일치하지 않습니다",
+      "success": "계정이 생성되었습니다!"
+    }
   }
 }

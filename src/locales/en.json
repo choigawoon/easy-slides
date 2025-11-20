@@ -353,5 +353,123 @@
     "unsaved": "Unsaved changes",
     "unsavedConfirm": "You have unsaved changes. Are you sure you want to leave?",
     "saving": "Saving..."
+  },
+  "dashboard": {
+    "title": "My Presentations",
+    "subtitle": "Create and manage your presentations",
+    "empty": {
+      "title": "No presentations yet",
+      "description": "Create your first presentation to get started",
+      "cta": "Create Presentation"
+    },
+    "createNew": "New Presentation",
+    "search": {
+      "placeholder": "Search presentations..."
+    },
+    "sort": {
+      "label": "Sort by",
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "title": "Title A-Z",
+      "titleDesc": "Title Z-A",
+      "mostViewed": "Most viewed"
+    },
+    "filter": {
+      "label": "Filter",
+      "all": "All",
+      "public": "Public",
+      "unlisted": "Unlisted",
+      "private": "Private"
+    },
+    "card": {
+      "slides": "{{count}} slides",
+      "views": "{{count}} views",
+      "edit": "Edit",
+      "present": "Present",
+      "share": "Share",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "confirmDelete": "Are you sure you want to delete \"{{title}}\"?",
+      "updated": "Updated {{time}}"
+    },
+    "stats": {
+      "total": "{{count}} presentations",
+      "showing": "Showing {{count}} of {{total}}"
+    }
+  },
+  "presenter": {
+    "slideNumber": "Slide {{current}} of {{total}}",
+    "timer": "Timer",
+    "notes": "Notes",
+    "exit": "Exit",
+    "restart": "Restart Timer",
+    "pause": "Pause",
+    "resume": "Resume",
+    "noNotes": "No notes for this slide",
+    "controls": {
+      "previous": "Previous slide",
+      "next": "Next slide",
+      "fullscreen": "Toggle fullscreen"
+    }
+  },
+  "share": {
+    "title": "Share Presentation",
+    "visibility": {
+      "label": "Visibility",
+      "private": "Private",
+      "privateDesc": "Only you can access",
+      "unlisted": "Unlisted",
+      "unlistedDesc": "Anyone with the link can view",
+      "public": "Public",
+      "publicDesc": "Discoverable by everyone"
+    },
+    "link": {
+      "label": "Share Link",
+      "copy": "Copy Link",
+      "copied": "Link copied!"
+    },
+    "password": {
+      "enable": "Password protect",
+      "placeholder": "Enter password"
+    },
+    "embed": {
+      "label": "Embed Code",
+      "copy": "Copy Code"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "subtitle": "Welcome back! Sign in to continue.",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "error": "Invalid email or password",
+      "success": "Welcome back!"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Start creating presentations today.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "username": "Username",
+      "usernamePlaceholder": "Choose a username",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "passwordMismatch": "Passwords do not match",
+      "success": "Account created successfully!"
+    }
   }
 }

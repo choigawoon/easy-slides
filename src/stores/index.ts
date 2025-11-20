@@ -30,9 +30,11 @@ import { createUiSlice, type UiSlice } from './slices/uiSlice'
 import { createTaskSlice, type TaskSlice } from './slices/taskSlice'
 import { createWorkflowSlice, type WorkflowSlice } from './slices/workflowSlice'
 import { createEditorSlice, type EditorSlice } from './slices/editorSlice'
+import { createAuthSlice, type AuthSlice } from './slices/authSlice'
+import { createPresenterSlice, type PresenterSlice } from './slices/presenterSlice'
 
 // Combined store type
-export type Store = ApiSlice & UiSlice & TaskSlice & WorkflowSlice & EditorSlice
+export type Store = ApiSlice & UiSlice & TaskSlice & WorkflowSlice & EditorSlice & AuthSlice & PresenterSlice
 
 /**
  * Main application store
@@ -49,15 +51,18 @@ export const useStore = create<Store>()(
         ...createTaskSlice(...args),
         ...createWorkflowSlice(...args),
         ...createEditorSlice(...args),
+        ...createAuthSlice(...args),
+        ...createPresenterSlice(...args),
       }),
       {
         name: 'app-storage', // LocalStorage key
-        // Only persist UI preferences, not API data or tasks
+        // Only persist UI preferences and auth token, not API data or tasks
         partialize: (state) => ({
           theme: state.theme,
           language: state.language,
           isSidebarOpen: state.isSidebarOpen,
           editorMode: state.editorMode,
+          token: state.token,
         }),
       }
     ),
@@ -241,9 +246,58 @@ export const useResetStore = () => {
   }
 }
 
+// Auth selectors
+export const useUser = () => useStore(state => state.user)
+export const useIsAuthenticated = () => useStore(state => state.isAuthenticated)
+export const useAuthLoading = () => useStore(state => state.isLoading)
+export const useAuthToken = () => useStore(state => state.token)
+
+// Presenter selectors
+export const usePresenterSlideIndex = () => useStore(state => state.currentSlideIndex)
+export const usePresenterTotalSlides = () => useStore(state => state.totalSlides)
+export const usePresenterFullscreen = () => useStore(state => state.isFullscreen)
+export const usePresenterShowNotes = () => useStore(state => state.showNotes)
+export const usePresenterShowControls = () => useStore(state => state.showControls)
+export const usePresenterElapsedTime = () => useStore(state => state.elapsedTime)
+export const usePresenterTimerRunning = () => useStore(state => state.isTimerRunning)
+
+// Auth actions
+export const useAuthActions = () => useStore(
+  useShallow(state => ({
+    setUser: state.setUser,
+    setToken: state.setToken,
+    login: state.login,
+    logout: state.logout,
+    setLoading: state.setLoading,
+  }))
+)
+
+// Presenter actions
+export const usePresenterActions = () => useStore(
+  useShallow(state => ({
+    setCurrentSlide: state.setCurrentSlide,
+    nextSlide: state.nextSlide,
+    prevSlide: state.prevSlide,
+    setTotalSlides: state.setTotalSlides,
+    toggleFullscreen: state.toggleFullscreen,
+    setFullscreen: state.setFullscreen,
+    toggleNotes: state.toggleNotes,
+    setShowNotes: state.setShowNotes,
+    toggleControls: state.toggleControls,
+    setShowControls: state.setShowControls,
+    startTimer: state.startTimer,
+    stopTimer: state.stopTimer,
+    resetTimer: state.resetTimer,
+    incrementTimer: state.incrementTimer,
+    setPresentationId: state.setPresentationId,
+    resetPresenter: state.reset,
+  }))
+)
+
 // Export types for use in components
-export type { User, Post } from './slices/apiSlice'
+export type { User as ApiUser, Post } from './slices/apiSlice'
 export type { Theme, Language, Notification } from './slices/uiSlice'
 export type { Task } from './slices/taskSlice'
 export type { WorkItem, WorkLog, WorkStatus } from './slices/workflowSlice'
 export type { EditorMode } from './slices/editorSlice'
+export type { User as AuthUser } from './slices/authSlice'
