@@ -27,13 +27,75 @@
     "logout": "ログアウト",
     "login": "ログイン",
     "mswTest": "MSWテスト",
-    "zustandTest": "Zustandテスト"
+    "zustandTest": "Zustandテスト",
+    "newPresentation": "新しいプレゼンテーション",
+    "loginHint": "ログインしてプレゼンテーションを保存"
   },
   "pages": {
     "home": {
       "title": "ようこそ",
       "description": "TanStack Routerで構築された最新のReactアプリケーションです",
-      "getStarted": "始める"
+      "getStarted": "始める",
+      "hero": {
+        "title": "美しいプレゼンテーションを簡単に作成",
+        "subtitle": "セミナーや講演のための最新のWebプレゼンテーションプラットフォーム。URLひとつで作成、共有、発表。",
+        "cta": "プレゼンテーションを作成",
+        "demo": "デモを見る"
+      },
+      "features": {
+        "title": "なぜEasy Slides？",
+        "easy": {
+          "title": "簡単に使える",
+          "description": "複雑な設定は不要。すぐにプレゼンテーションを作成できます。"
+        },
+        "share": {
+          "title": "簡単共有",
+          "description": "URLで即座に共有。ダウンロード不要。"
+        },
+        "present": {
+          "title": "発表モード",
+          "description": "タイマーとノート付きの最適化された発表者ビュー。"
+        },
+        "discover": {
+          "title": "コンテンツを発見",
+          "description": "役立つプレゼンテーションを検索・発見。"
+        },
+        "privacy": {
+          "title": "プライバシー管理",
+          "description": "公開、限定公開、非公開オプションで可視性を制御。"
+        },
+        "markdown": {
+          "title": "マークダウンサポート",
+          "description": "リアルタイムプレビュー付きでマークダウンでスライドを作成。"
+        }
+      },
+      "howItWorks": {
+        "title": "使い方",
+        "step1": {
+          "title": "新しいプレゼンテーションを作成",
+          "description": "「新しいプレゼンテーション」ボタンをクリックしてスライド作成を開始。"
+        },
+        "step2": {
+          "title": "マークダウンで書く",
+          "description": "リアルタイムプレビュー付きのマークダウンエディタでコンテンツを作成。"
+        },
+        "step3": {
+          "title": "作品を共有",
+          "description": "ユニークなURLを取得して誰とでもプレゼンテーションを共有。"
+        },
+        "step4": {
+          "title": "自信を持って発表",
+          "description": "タイマーとノート付きのフルスクリーン発表モードを使用。"
+        }
+      },
+      "cta": {
+        "title": "作成する準備はできましたか？",
+        "description": "数分で美しいプレゼンテーションを作成しましょう。",
+        "button": "無料で始める"
+      },
+      "footer": {
+        "copyright": "Easy Slides - Webプレゼンテーションプラットフォーム"
+      }
     },
     "mswTest": {
       "title": "MSW + TanStack Query テスト",

@@ -27,13 +27,75 @@
     "logout": "Logout",
     "login": "Login",
     "mswTest": "MSW Test",
-    "zustandTest": "Zustand Test"
+    "zustandTest": "Zustand Test",
+    "newPresentation": "New Presentation",
+    "loginHint": "Sign in to save your presentations"
   },
   "pages": {
     "home": {
       "title": "Welcome",
       "description": "This is a modern React application built with TanStack Router",
-      "getStarted": "Get Started"
+      "getStarted": "Get Started",
+      "hero": {
+        "title": "Create Beautiful Presentations with Ease",
+        "subtitle": "The modern web-based presentation platform for seminars and lectures. Create, share, and present with just a URL.",
+        "cta": "Create Presentation",
+        "demo": "Watch Demo"
+      },
+      "features": {
+        "title": "Why Easy Slides?",
+        "easy": {
+          "title": "Easy to Use",
+          "description": "No complex setup required. Start creating presentations immediately."
+        },
+        "share": {
+          "title": "Easy Sharing",
+          "description": "Share instantly with a URL. No downloads needed."
+        },
+        "present": {
+          "title": "Presentation Mode",
+          "description": "Optimized presenter view with timer and notes."
+        },
+        "discover": {
+          "title": "Discover Content",
+          "description": "Search and discover useful presentations."
+        },
+        "privacy": {
+          "title": "Privacy Control",
+          "description": "Control visibility with public, unlisted, or private options."
+        },
+        "markdown": {
+          "title": "Markdown Support",
+          "description": "Write slides in Markdown with live preview."
+        }
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "step1": {
+          "title": "Create a New Presentation",
+          "description": "Click the 'New Presentation' button to start creating your slides."
+        },
+        "step2": {
+          "title": "Write in Markdown",
+          "description": "Use the Markdown editor to write your content with real-time preview."
+        },
+        "step3": {
+          "title": "Share Your Work",
+          "description": "Get a unique URL to share your presentation with anyone."
+        },
+        "step4": {
+          "title": "Present with Confidence",
+          "description": "Use the full-screen presenter mode with timer and notes."
+        }
+      },
+      "cta": {
+        "title": "Ready to Create?",
+        "description": "Start making beautiful presentations in minutes.",
+        "button": "Get Started for Free"
+      },
+      "footer": {
+        "copyright": "Easy Slides - Web Presentation Platform"
+      }
     },
     "mswTest": {
       "title": "MSW + TanStack Query Test",
