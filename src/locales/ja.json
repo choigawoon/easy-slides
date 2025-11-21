@@ -353,5 +353,123 @@
     "unsaved": "未保存の変更",
     "unsavedConfirm": "未保存の変更があります。本当に離れますか？",
     "saving": "保存中..."
+  },
+  "dashboard": {
+    "title": "マイプレゼンテーション",
+    "subtitle": "プレゼンテーションを作成・管理",
+    "empty": {
+      "title": "プレゼンテーションがありません",
+      "description": "最初のプレゼンテーションを作成して始めましょう",
+      "cta": "プレゼンテーションを作成"
+    },
+    "createNew": "新しいプレゼンテーション",
+    "search": {
+      "placeholder": "プレゼンテーションを検索..."
+    },
+    "sort": {
+      "label": "並べ替え",
+      "newest": "新しい順",
+      "oldest": "古い順",
+      "title": "タイトル A-Z",
+      "titleDesc": "タイトル Z-A",
+      "mostViewed": "閲覧数順"
+    },
+    "filter": {
+      "label": "フィルター",
+      "all": "すべて",
+      "public": "公開",
+      "unlisted": "限定公開",
+      "private": "非公開"
+    },
+    "card": {
+      "slides": "{{count}}スライド",
+      "views": "{{count}}回閲覧",
+      "edit": "編集",
+      "present": "発表",
+      "share": "共有",
+      "duplicate": "複製",
+      "delete": "削除",
+      "confirmDelete": "「{{title}}」を削除してもよろしいですか？",
+      "updated": "{{time}}更新"
+    },
+    "stats": {
+      "total": "{{count}}件のプレゼンテーション",
+      "showing": "{{total}}件中{{count}}件を表示"
+    }
+  },
+  "presenter": {
+    "slideNumber": "スライド {{current}} / {{total}}",
+    "timer": "タイマー",
+    "notes": "ノート",
+    "exit": "終了",
+    "restart": "タイマーリセット",
+    "pause": "一時停止",
+    "resume": "再開",
+    "noNotes": "このスライドにノートはありません",
+    "controls": {
+      "previous": "前のスライド",
+      "next": "次のスライド",
+      "fullscreen": "全画面切り替え"
+    }
+  },
+  "share": {
+    "title": "プレゼンテーションを共有",
+    "visibility": {
+      "label": "公開設定",
+      "private": "非公開",
+      "privateDesc": "自分だけがアクセス可能",
+      "unlisted": "限定公開",
+      "unlistedDesc": "リンクを知っている人だけが閲覧可能",
+      "public": "公開",
+      "publicDesc": "誰でも検索可能"
+    },
+    "link": {
+      "label": "共有リンク",
+      "copy": "リンクをコピー",
+      "copied": "リンクがコピーされました！"
+    },
+    "password": {
+      "enable": "パスワード保護",
+      "placeholder": "パスワードを入力"
+    },
+    "embed": {
+      "label": "埋め込みコード",
+      "copy": "コードをコピー"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "ログイン",
+      "subtitle": "お帰りなさい！続けるにはログインしてください。",
+      "email": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "submit": "ログイン",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUp": "新規登録",
+      "error": "メールアドレスまたはパスワードが正しくありません",
+      "success": "お帰りなさい！"
+    },
+    "register": {
+      "title": "アカウント作成",
+      "subtitle": "今すぐプレゼンテーションを作成しましょう。",
+      "fullName": "氏名",
+      "fullNamePlaceholder": "氏名を入力",
+      "username": "ユーザー名",
+      "usernamePlaceholder": "ユーザー名を選択",
+      "email": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを作成",
+      "confirmPassword": "パスワード確認",
+      "confirmPasswordPlaceholder": "パスワードを再入力",
+      "submit": "アカウント作成",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "signIn": "ログイン",
+      "passwordMismatch": "パスワードが一致しません",
+      "success": "アカウントが作成されました！"
+    }
   }
 }

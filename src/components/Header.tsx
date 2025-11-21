@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
-import { Home, Menu, Plus, LayoutDashboard, Presentation } from 'lucide-react'
+import { Home, Menu, Plus, LayoutDashboard, Presentation, LogIn } from 'lucide-react'
 import LanguageSelector from './LanguageSelector'
 import { Button } from '@/components/ui/button'
 import {
@@ -67,12 +67,29 @@ export default function Header() {
               </Link>
 
               <Link
-                to="/"
+                to="/dashboard"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
+                activeProps={{
+                  className:
+                    'flex items-center gap-3 p-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors mb-2',
+                }}
                 onClick={() => setSidebarOpen(false)}
               >
                 <LayoutDashboard size={20} />
                 <span className="font-medium">{t('nav.dashboard')}</span>
+              </Link>
+
+              <Link
+                to="/auth/login"
+                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
+                activeProps={{
+                  className:
+                    'flex items-center gap-3 p-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors mb-2',
+                }}
+                onClick={() => setSidebarOpen(false)}
+              >
+                <LogIn size={20} />
+                <span className="font-medium">{t('nav.login')}</span>
               </Link>
             </nav>
 
@@ -89,6 +106,12 @@ export default function Header() {
         </h1>
       </div>
       <div className="flex items-center gap-3">
+        <Link to="/dashboard" className="hidden sm:block">
+          <Button variant="ghost" size="sm" className="text-white hover:bg-gray-800">
+            <LayoutDashboard size={16} className="mr-1" />
+            {t('nav.dashboard')}
+          </Button>
+        </Link>
         <Link to="/editor/new">
           <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
             <Plus size={16} className="mr-1" />
